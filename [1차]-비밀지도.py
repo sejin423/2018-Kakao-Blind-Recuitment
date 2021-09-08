@@ -1,3 +1,4 @@
+# 이진수 변환
 def binary(x):
     result = ''
     arr = ['0','1']
@@ -19,13 +20,13 @@ def solution(n, arr1, arr2):
             bin_result1 = '0' + bin_result1
         while len(bin_result2) < n:
             bin_result2 = '0' + bin_result2
+			
         for i in range(n):
-            
+            # 두 결과 값 중 한개라도 1인 경우에 '#' 추가, 그렇지 않으면 ' ' 추가
             if bin_result1[i] =='1' or bin_result2[i] =='1':
                 full_str += '#'
             else:
                 full_str += ' '
         answer.append(full_str)
-        
         
     return answer
